@@ -1,5 +1,5 @@
 let jobsList = [];
-
+// Listar vagas
 function showJobs() {
   let vacancyText = jobsList.reduce(function (finalText, vacancy, index) {
     finalText += `${index}. `;
@@ -10,7 +10,7 @@ function showJobs() {
 
   alert(vacancyText);
 }
-
+// Criar nova vaga
 function newJob() {
   let jobName = prompt("Qual o nome da vaga que deseja cadastrar?");
   let jobDescription = prompt("Faça uma descrição da vaga: ");
@@ -30,7 +30,7 @@ function newJob() {
     alert("Vaga não cadastrada.");
   }
 }
-
+// Ver vagas
 function seeJobs() {
   let index = prompt("Informe o índice da vaga que deseja exibir: ");
   let vacancy = jobsList[index];
@@ -50,7 +50,7 @@ function seeJobs() {
   Quantidade de candidatos: ${vacancy.candidates.length}
   Candidatos inscritos: ${candidatesText}`);
 }
-
+// Inscrever candidato em uma vaga
 function subCandidate() {
   let candidate = prompt("Qual é o nome do candidato?");
   let index = prompt(
@@ -71,7 +71,7 @@ function subCandidate() {
     alert("Candidato não inscrito na vaga.");
   }
 }
-
+// Remover uma vaga
 function deleteJobVac() {
   let index = prompt("Informe o índice da vaga que deseja excluir:");
   let vacancy = jobsList[index];
@@ -88,7 +88,7 @@ function deleteJobVac() {
     alert("A operação foi cancelada.");
   }
 }
-
+// Menu
 function showMenu() {
   let options = prompt(`Bem vindo ao cadastro de vagas de emprego!
   Por favor, escolha uma opção:
@@ -101,7 +101,7 @@ function showMenu() {
 
   return options;
 }
-
+// Chamada de funções
 function exe() {
   let option = "";
 
